@@ -1,4 +1,3 @@
-/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -8,121 +7,66 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #121212;
   color: #eaeaea;
-  line-height: 1.6;
 }
 
 /* Header */
 header {
-  background-color: #1f1f1f;
-  padding: 20px 0;
+  background: #1f1f1f;
+  padding: 15px;
+  text-align: center;
   position: fixed;
-  top: 0;
   width: 100%;
   z-index: 10;
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
 .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
-  color: #ffcc00;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-}
-nav ul li {
-  margin: 0 10px;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #eaeaea;
-  font-size: 16px;
-}
-nav ul li a:hover {
   color: #ffcc00;
 }
 
 /* Hero */
-#hero {
-  padding: 100px 20px 60px;
-  background: linear-gradient(#1f1f1f, #121212);
+.hero {
+  padding: 100px 20px 40px;
   text-align: center;
-  margin-top: 80px;
 }
-.hero-content h1 {
-  font-size: 36px;
+.hero h1 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
-.hero-content p {
-  font-size: 18px;
+.hero p {
+  font-size: 16px;
   color: #ccc;
 }
 
-/* Sections */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-section h2 {
-  color: #ffcc00;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-section p {
-  font-size: 16px;
-}
-
-/* Images */
-.app-image {
-  max-width: 90%;
-  height: auto;
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: block;
-}
-
-/* Feature Cards */
-.feature-container {
+/* Info Grid */
+.info-grid {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-.feature-card {
-  background-color: #2c2c2c;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-.feature-card h3 {
+.info-box {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-left: 4px solid #ffcc00;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.info-box h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
   color: #ffcc00;
-  margin-bottom: 10px;
 }
-.feature-card p {
-  font-size: 15px;
+.info-box p {
+  font-size: 14px;
+  color: #ddd;
 }
 
 /* Footer */
 footer {
-  background-color: #1f1f1f;
   padding: 20px;
   text-align: center;
   font-size: 14px;
-  color: #999;
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-  .feature-container {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .feature-card {
-    width: 250px;
-  }
+  background: #1f1f1f;
+  color: #aaa;
 }
