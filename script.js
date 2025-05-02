@@ -1,8 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-
-  toggle.addEventListener('click', () => {
-    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
   });
 });
