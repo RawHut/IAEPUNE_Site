@@ -1,0 +1,51 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f1f1f;
+  padding: 1rem;
+}
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.nav {
+  display: none;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav ul li { margin: 1rem 0; }
+.nav ul li a {
+  color: #bb86fc;
+  text-decoration: none;
+}
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+}
+@media (min-width: 600px) {
+  .nav {
+    display: block;
+  }
+  .nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+/* Section, card, and footer styling can follow your previous dark theme rules */
