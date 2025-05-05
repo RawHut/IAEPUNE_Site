@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card');
+  const cards = Array.from(document.querySelectorAll('.card'));
+  let current = 0;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -10% 0px'
+  function updateActive() {
+    cards.forEach((c,i) => c.classList.toggle('active', i === current));
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+    // one viewport per card after the spacer
+    const idx = Math.floor((scrollPos - window.innerHeight + 100) / window.innerHeight) + 1;
+    const newIndex = Math.max(0, Math.min(cards.length - 1, idx));
+    if (newIndex !== current) {
+      current = newIndex;
+      updateActive();
+    }
   });
-
-  cards.forEach(card => observer.observe(card));
 });
