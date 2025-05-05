@@ -1,147 +1,86 @@
 /* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box }
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
   color: #333;
+  height: 600vh; /* enough height for scrolling */
+  position: relative;
 }
 
-/* Top Ribbon */
-.ribbon {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #000;
-  padding: 10px 15px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-}
-.logo { height: 40px; }
-.top-nav .nav-button {
-  margin-left: 10px;
-  padding: 6px 12px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 14px;
-}
-.top-nav .nav-button:hover { background: #0056b3; }
-
-/* Cards Container */
-.cards-container {
-  margin-top: 64px; /* ribbon height */
-  padding: 20px;
-}
-
-/* Card Base */
-.card {
-  background: #fff;
-  border-radius: 8px;
-  margin-bottom: 24px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Instruction Card */
+/* Fixed Instruction Box */
 .instruction-card {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
   background: #1e88e5;
   color: #fff;
+  padding: 24px;
+  border-radius: 12px;
   text-align: center;
+  width: 80%;
+  max-width: 320px;
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+.instr-decor {
+  width: 60px; height: 4px;
+  background: #fff;
+  margin: 0 auto 12px;
+  border-radius: 2px;
 }
 
-/* Image Card */
+/* Invisible spacer so first card sits below instruction */
+.spacer {
+  height: 100vh;
+}
+
+/* Card Base (all cards overlap each other) */
+.card {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 90%;
+  max-width: 360px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Only the .active card is fully visible and centered */
+.card.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 5;
+}
+
+/* Decorations for different cards */
 .image-card .img-box {
-  margin-bottom: 16px;
   overflow: hidden;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.image-card .img-box img {
-  display: block;
-  width: 100%;
-  height: auto;
+.image-card img { width:100%; display:block }
+
+.info2  { background: #e8f5e9; }
+.info1  { background: #e3f2fd; }
+.info3  { background: #fff3e0; }
+.info4  { background: #f3e5f5; }
+.disclaimer-card { background: #fff; }
+
+/* Card Content */
+.card-content {
+  padding: 20px;
+  text-align: center;
 }
-
-/* Info Card Backgrounds */
-.info1 { background: #e3f2fd; }
-.info2 { background: #e8f5e9; }
-.info3 { background: #fff3e0; }
-.info4 { background: #f3e5f5; }
-
-/* Typography */
 .card-content h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: 22px; margin-bottom: 12px;
 }
 .card-content p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 8px;
+  font-size: 16px; line-height:1.5;
 }
+.disclaimer { font-size:14px; color:#666; }
 
-/* Full-Text Reveal */
-.full-text {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.6s ease 0.2s, max-height 0.6s ease 0.2s;
-}
-.card.visible .full-text {
-  max-height: 500px;
-  opacity: 1;
-}
-
-/* Institute List Styling */
-.institute-list {
-  margin-top: 16px;
-}
-.institute-list h4 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-.institute-list ol {
-  padding-left: 1.2em;
-  line-height: 1.6;
-}
-.institute-list ol li {
-  margin-bottom: 6px;
-}
-.institute-list ol li strong {
-  color: #1565C0;
-}
-
-/* Disclaimer Card */
-.disclaimer-card .disclaimer {
-  font-size: 14px;
-  text-align: center;
-  color: #666;
-}
-
-/* Footer */
-.footer {
-  background: #000;
-  text-align: center;
-  padding: 15px 0;
-}
-.loc-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-.loc-link:hover {
-  text-decoration: underline;
-}
+/* Price Asterisk */
+.asterisk { font-size: 14px; vertical-align: super; }
