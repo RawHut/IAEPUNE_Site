@@ -76,7 +76,7 @@ body {
   height: auto;
 }
 
-/* Info Card Colors */
+/* Info Card Backgrounds */
 .info1 { background: #e3f2fd; }
 .info2 { background: #e8f5e9; }
 .info3 { background: #fff3e0; }
@@ -93,7 +93,7 @@ body {
   margin-bottom: 8px;
 }
 
-/* Hidden Full Text */
+/* Full-Text Reveal */
 .full-text {
   max-height: 0;
   opacity: 0;
@@ -103,6 +103,32 @@ body {
 .card.visible .full-text {
   max-height: 500px;
   opacity: 1;
+}
+
+/* Institute List Styling */
+.institute-list {
+  margin-top: 16px;
+}
+.institute-list h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.institute-list ol {
+  padding-left: 1.2em;
+  line-height: 1.6;
+}
+.institute-list ol li {
+  margin-bottom: 6px;
+}
+.institute-list ol li strong {
+  color: #1565C0;
+}
+
+/* Disclaimer Card */
+.disclaimer-card .disclaimer {
+  font-size: 14px;
+  text-align: center;
+  color: #666;
 }
 
 /* Footer */
