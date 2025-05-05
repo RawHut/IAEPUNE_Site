@@ -4,11 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us – IAE Pune</title>
+
+  <!-- Global Styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Contact Page Styles -->
+  <link rel="stylesheet" href="contact.css" />
+
+  <!-- AOS for Scroll Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
 
-  <!-- Top Ribbon -->
+  <!-- Top Ribbon (consistent with main site) -->
   <header class="ribbon">
     <img src="logo.png" alt="IAE Pune Logo" class="logo">
     <nav class="top-nav">
@@ -17,28 +25,51 @@
     </nav>
   </header>
 
-  <!-- Contact Section -->
-  <main style="padding-top: 80px;">
-    <section class="info-section">
-      <div class="info-box" style="cursor: default;">
-        <h3>Contact Us</h3>
-        <p>You can also reach us at our <a href="https://wa.me/message/MSJ6FEHF5BHIO1" target="_blank">WhatsApp chat</a>.</p>
-        <p><strong>Email:</strong> <a href="mailto:niyathbansode5@gmail.com">niyathbansode5@gmail.com</a></p>
-        <p><strong>Phone:</strong></p>
-        <ul>
-          <li>+91 9975042929 – Mr. Vishal</li>
-          <li>+91 9226506256 – Niyath Bansode</li>
-        </ul>
-      </div>
-    </section>
+  <!-- Hero / Header Section -->
+  <section class="contact-hero" data-aos="fade-down">
+    <h1>Get in Touch</h1>
+    <p>We’re here to help you every step of the way. Reach out via any of the channels below.</p>
+  </section>
+
+  <!-- Contact Method Cards -->
+  <main class="contact-cards">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="icon">💬</div>
+      <h2>WhatsApp</h2>
+      <p><a href="https://wa.me/message/MSJ6FEHF5BHIO1" target="_blank">
+        You can also reach us on our WhatsApp chat
+      </a></p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <div class="icon">✉️</div>
+      <h2>Email</h2>
+      <p><a href="mailto:niyathbansode5@gmail.com">
+        niyathbansode5@gmail.com
+      </a></p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <div class="icon">📞</div>
+      <h2>Phone</h2>
+      <p>
+        <a href="tel:+919975042929">+91‑9975042929 (Mr. Vishal)</a><br/>
+        <a href="tel:+919226506256">+91‑9226506256 (Niyath Bansode)</a>
+      </p>
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- Footer / Location -->
+  <footer class="contact-footer" data-aos="fade-up">
     <a href="https://maps.google.com/?q=IAE+Pune+Office" target="_blank" class="loc-link">
-      Find Our Location
+      📍 Find Our Location
     </a>
   </footer>
 
+  <!-- AOS & Initialization -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+  </script>
 </body>
 </html>
