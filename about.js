@@ -1,11 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize AOS
-  AOS.init({ duration: 600, once: true });
+function toggleInfo(card) {
+  const paragraph = card.querySelector("p");
+  const isVisible = paragraph.classList.contains("visible");
 
-  // Toggle detail cards
-  document.querySelectorAll('.detail-card').forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('active');
-    });
+  // Hide all others
+  document.querySelectorAll(".info-card p.visible").forEach(p => {
+    p.classList.remove("visible");
+    setTimeout(() => {
+      p.style.display = "none";
+    }, 400);
   });
-});
+
+  // Show clicked one if it wasn't already visible
+  if (!isVisible) {
+    paragraph.style.display = "block";
+    setTimeout(() => {
+      paragraph.classList.add("visible");
+    }, 10);
+  }
+}
