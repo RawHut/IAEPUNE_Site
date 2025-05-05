@@ -6,9 +6,8 @@
 }
 body {
   font-family: Arial, sans-serif;
-  background: #fff;
+  background: #f4f4f4;
   color: #333;
-  overflow-x: hidden;
 }
 
 /* Top Ribbon */
@@ -16,9 +15,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #000000;
+  background: #000;
   padding: 10px 15px;
-  border-bottom: 2px solid #ddd;
   position: fixed;
   width: 100%;
   top: 0;
@@ -30,8 +28,8 @@ body {
 .top-nav .nav-button {
   margin-left: 10px;
   padding: 6px 12px;
-  background: #000000;
-  color: #FFFFFF;
+  background: #000;
+  color: #fff;
   text-decoration: none;
   border-radius: 4px;
   font-size: 14px;
@@ -40,82 +38,63 @@ body {
   background: #0056b3;
 }
 
-/* Main Container */
-.card-container {
-  margin-top: 64px; /* Adjust for ribbon height */
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+/* Cards Container */
+.cards-container {
+  margin-top: 64px; /* ribbon height */
+  padding: 20px;
 }
 
 /* Card Base */
 .card {
-  scroll-snap-align: start;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1200px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 24px;
   padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.card-inner {
-  width: 100%;
-  max-width: 360px;
-  height: 420px;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
+/* When in view */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Instruction Card Styling */
+.instruction-card {
+  background: #1e88e5;
   color: #fff;
+  text-align: center;
+}
+.instruction-card .card-content h2 {
+  margin-bottom: 8px;
 }
 
-.card-front {
-  background: #007BFF;
-}
-.card-back {
-  background: #003366;
-  transform: rotateY(180deg);
-}
-
-/* Flip effect */
-.card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Individual Card Background Colors */
-.card1 .card-front { background: #1E88E5; }
-.card1 .card-back  { background: #1565C0; }
-
-.card2 .card-front { background: #43A047; }
-.card2 .card-back  { background: #2E7D32; }
-
-.card3 .card-front { background: #FB8C00; }
-.card3 .card-back  { background: #EF6C00; }
-
-.card4 .card-front { background: #8E24AA; }
-.card4 .card-back  { background: #6A1B9A; }
-
-/* Typography */
-.card h2 {
-  font-size: 24px;
+/* Typography Inside Cards */
+.card-content h3 {
+  font-size: 20px;
   margin-bottom: 12px;
 }
-.card p {
+.card-content p {
   font-size: 16px;
   line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Hidden Full Text */
+.full-text {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease 0.2s, max-height 0.6s ease 0.2s;
+}
+
+/* Reveal extra text when card is visible */
+.card.visible .full-text {
+  max-height: 500px; /* large enough to show all text */
+  opacity: 1;
 }
 
 /* Footer */
