@@ -22,9 +22,7 @@ body {
   top: 0;
   z-index: 10;
 }
-.logo {
-  height: 40px;
-}
+.logo { height: 40px; }
 .top-nav .nav-button {
   margin-left: 10px;
   padding: 6px 12px;
@@ -34,9 +32,7 @@ body {
   border-radius: 4px;
   font-size: 14px;
 }
-.top-nav .nav-button:hover {
-  background: #0056b3;
-}
+.top-nav .nav-button:hover { background: #0056b3; }
 
 /* Cards Container */
 .cards-container {
@@ -55,24 +51,38 @@ body {
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
-/* When in view */
 .card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Instruction Card Styling */
+/* Instruction Card */
 .instruction-card {
   background: #1e88e5;
   color: #fff;
   text-align: center;
 }
-.instruction-card .card-content h2 {
-  margin-bottom: 8px;
+
+/* Image Card */
+.image-card .img-box {
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.image-card .img-box img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-/* Typography Inside Cards */
+/* Info Card Colors */
+.info1 { background: #e3f2fd; }
+.info2 { background: #e8f5e9; }
+.info3 { background: #fff3e0; }
+.info4 { background: #f3e5f5; }
+
+/* Typography */
 .card-content h3 {
   font-size: 20px;
   margin-bottom: 12px;
@@ -90,10 +100,8 @@ body {
   overflow: hidden;
   transition: opacity 0.6s ease 0.2s, max-height 0.6s ease 0.2s;
 }
-
-/* Reveal extra text when card is visible */
 .card.visible .full-text {
-  max-height: 500px; /* large enough to show all text */
+  max-height: 500px;
   opacity: 1;
 }
 
