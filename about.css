@@ -1,99 +1,43 @@
-/* Base Styles */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff;
+#more-about {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   color: #222;
 }
-.about-section {
-  padding: 20px;
-  max-width: 600px;
-  margin: auto;
-}
-.section-title {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 30px;
-}
 
-/* Timeline */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.timeline-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  background: #f9f9f9;
-  padding: 16px;
+.info-card {
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.timeline-card .icon {
-  font-size: 20px;
-  color: #ffcc00;
-}
-.timeline-text h3 {
-  margin: 0 0 4px;
-  font-size: 18px;
-}
-.timeline-text p {
-  margin: 0;
-  font-size: 14px;
-  color: #555;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  margin: 1rem auto;
+  max-width: 90%;
+  padding: 1.2rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  text-align: left;
 }
 
-/* Know More Detail Cards */
-.know-more {
-  margin-top: 40px;
+.info-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111;
 }
-.section-subtitle {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.detail-card {
-  background: #f4f4f4;
-  padding: 16px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-}
-.card-title,
-.card-detail {
+
+.info-card p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+  display: none;
+  opacity: 0;
   transition: opacity 0.4s ease;
 }
-.card-detail {
-  opacity: 0;
-  max-height: 0;
-  margin-top: 8px;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.detail-card.active .card-title {
-  opacity: 0;
-}
-.detail-card.active .card-detail {
-  opacity: 1;
-  max-height: 200px;
-}
 
-/* AOS overrides if needed */
-[data-aos] {
-  opacity: 0;
-  transition-property: opacity, transform;
-}
-[data-aos].aos-animate {
+.info-card p.visible {
+  display: block;
   opacity: 1;
-}
-
-/* Responsive */
-@media (min-width: 600px) {
-  .about-section {
-    padding: 40px;
-  }
 }
