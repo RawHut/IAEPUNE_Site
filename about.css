@@ -1,3 +1,4 @@
+/* ── GLOBAL ───────────────────────────────────────────────────────────── */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -5,17 +6,72 @@ body {
   color: #eee;
 }
 
+/* ── HEADER ───────────────────────────────────────────────────────────── */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Circular logo container */
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 50%;
+}
+
+/* Nav buttons container */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Styled link-buttons */
+.nav-btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ── SECTION “KNOW MORE ABOUT US” ─────────────────────────────────────── */
 #more-about {
   padding: 2rem 1rem;
   text-align: center;
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 1.5rem;
   color: #fff;
 }
 
+/* ── INFO CARDS ───────────────────────────────────────────────────────── */
 .info-card {
   background: #1e1e1e;
   border: 1px solid #333;
@@ -55,27 +111,4 @@ body {
 .info-text.visible {
   opacity: 1;
   max-height: 200px;
-}
-
-.top-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem 0;
-  background-color: #111;
-}
-
-.top-buttons button {
-  background-color: #333;
-  color: #eee;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.top-buttons button:hover {
-  background-color: #555;
 }
