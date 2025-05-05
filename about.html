@@ -1,130 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us – IAE Pune</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - IAE Pune</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      color: #222;
+    }
 
-  <!-- Global Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin: 60px auto;
+      position: relative;
+    }
 
-  <!-- About‑Page Styles -->
-  <link rel="stylesheet" href="about.css" />
+    .timeline-line {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background-color: #ffc107;
+    }
 
-  <!-- AOS for scroll animations -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    .timeline-item {
+      position: relative;
+      width: 100%;
+      margin: 50px 0;
+    }
+
+    .timeline-dot {
+      width: 20px;
+      height: 20px;
+      background-color: #ffc107;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .timeline-content {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 85%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 0.6s ease;
+    }
+
+    .timeline-content h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .timeline-content {
+        width: 90%;
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Ribbon Header -->
-  <header class="ribbon">
-    <img src="logo.png" alt="IAE Pune Logo" class="logo">
-    <nav class="top-nav">
-      <a href="index.html" class="nav-button">Home</a>
-      <a href="contact.html" class="nav-button">Contact Us</a>
-    </nav>
-  </header>
+  <div class="container">
+    <div class="timeline-line"></div>
 
-  <!-- Hero / Intro -->
-  <section class="about-hero" data-aos="fade-down">
-    <h1>About Us</h1>
-    <p>Your journey to vocational success in Germany starts here.</p>
-  </section>
-
-  <!-- Timeline -->
-  <section class="timeline" data-aos="fade-up">
-    <div class="timeline-event" data-aos="fade-up" data-aos-delay="100">
-      <h3>Founding & Vision</h3>
-      <p>IAE Pune was established to bridge Indian talent with Germany’s vocational training system, empowering students to build global careers.</p>
-    </div>
-    <div class="timeline-event" data-aos="fade-up" data-aos-delay="200">
-      <h3>Launch of Ausbildung Services</h3>
-      <p>We rolled out tailored Ausbildung program support—career counseling, language coaching, and document prep—to aspiring students.</p>
-    </div>
-    <div class="timeline-event" data-aos="fade-up" data-aos-delay="300">
-      <h3>First Student Placements</h3>
-      <p>Our inaugural batch achieved successful placements in healthcare and mechatronics, marking a milestone in our impact journey.</p>
-    </div>
-    <div class="timeline-event" data-aos="fade-up" data-aos-delay="400">
-      <h3>Post‑Arrival Support Expansion</h3>
-      <p>We expanded services in Germany to include airport pickup, housing assistance, local registrations, and ongoing assistance.</p>
-    </div>
-    <div class="timeline-event" data-aos="fade-up" data-aos-delay="500">
-      <h3>Today’s Team & Impact</h3>
-      <p>Our dedicated team—led by Mr. Vishal B and Niyath Bansode—has guided hundreds of students toward rewarding Ausbildung careers.</p>
-    </div>
-  </section>
-
-  <!-- Flippable Cards -->
-  <section class="flips-section">
-    <div class="flip-card" data-aos="zoom-in">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h4>Our Mission</h4>
-        </div>
-        <div class="flip-card-back">
-          <p>To empower Indian students with practical skills, international exposure, and permanent career pathways through Germany’s Ausbildung programs.</p>
-        </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Who We Are</h3>
+        <p>IAE Pune is a reliable consultancy helping students and professionals explore international education and career opportunities, especially in Germany.</p>
       </div>
     </div>
 
-    <div class="flip-card" data-aos="zoom-in" data-aos-delay="100">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h4>Core Services</h4>
-        </div>
-        <div class="flip-card-back">
-          <ul>
-            <li>Program selection & counseling</li>
-            <li>German language coaching (A1–B2)</li>
-            <li>Documentation & interview prep</li>
-            <li>Visa & travel arrangements</li>
-            <li>Post‑arrival orientation</li>
-          </ul>
-        </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Study Abroad Guidance</h3>
+        <p>We assist in selecting the right universities, preparing documents, and guiding through application and visa processes to study abroad stress-free.</p>
       </div>
     </div>
 
-    <div class="flip-card" data-aos="zoom-in" data-aos-delay="200">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h4>Key Benefits</h4>
-        </div>
-        <div class="flip-card-back">
-          <ul>
-            <li>Earn €1,000–€1,500/month</li>
-            <li>Hands‑on training with German companies</li>
-            <li>High placement & settlement rates</li>
-            <li>International skill recognition</li>
-          </ul>
-        </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Germany Ausbildung Support</h3>
+        <p>We specialize in helping students join Ausbildung (vocational training) programs in Germany, offering career-focused and practical paths for success.</p>
       </div>
     </div>
 
-    <div class="flip-card" data-aos="zoom-in" data-aos-delay="300">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h4>Our Team</h4>
-        </div>
-        <div class="flip-card-back">
-          <p>Led by industry experts Mr. Vishal B and Niyath Bansode, our team brings years of experience in international education and student support.</p>
-        </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>End-to-End Services</h3>
+        <p>From the first counseling session to post-arrival support, IAE Pune takes care of every step in your journey abroad.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="contact-footer" data-aos="fade-up">
-    <a href="https://maps.google.com/?q=IAE+Pune+Office" target="_blank" class="loc-link">
-      📍 Find Our Location
-    </a>
-  </footer>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Why Choose Us</h3>
+        <p>We believe in transparency, personalized support, and building long-term trust with our students and partners.</p>
+      </div>
+    </div>
 
-  <!-- AOS & Flip‑Card Script -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="about.js"></script>
-  <script>
-    AOS.init({ duration: 600, once: true });
-  </script>
+  </div>
+
 </body>
 </html>
