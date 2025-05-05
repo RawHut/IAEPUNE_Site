@@ -1,107 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - IAE Pune</title>
-  <link rel="stylesheet" href="about.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-</head>
-<body>
-
-  <section class="about-section">
-    <h2 class="section-title" data-aos="fade-down">About IAE Pune</h2>
-
-    <!-- Timeline Cards -->
-    <div class="timeline">
-      <div class="timeline-card" data-aos="fade-up">
-        <i class="fas fa-bullseye icon"></i>
-        <div class="timeline-text">
-          <h3>Our Mission</h3>
-          <p>Providing transparent, affordable access to Germany’s Ausbildung and study‑abroad programs.</p>
-        </div>
-      </div>
-      <div class="timeline-card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-chalkboard-teacher icon"></i>
-        <div class="timeline-text">
-          <h3>Expert Mentorship</h3>
-          <p>One‑on‑one guidance from application through post‑arrival support.</p>
-        </div>
-      </div>
-      <div class="timeline-card" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-handshake icon"></i>
-        <div class="timeline-text">
-          <h3>Trusted Partnerships</h3>
-          <p>Collaborations with top German companies and institutions for high placement rates.</p>
-        </div>
-      </div>
-      <div class="timeline-card" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-globe icon"></i>
-        <div class="timeline-text">
-          <h3>Global Exposure</h3>
-          <p>Hands‑on vocational training and cultural immersion in Germany.</p>
-        </div>
-      </div>
-      <div class="timeline-card" data-aos="fade-up" data-aos-delay="400">
-        <i class="fas fa-users icon"></i>
-        <div class="timeline-text">
-          <h3>Community Impact</h3>
-          <p>Empowering hundreds of students and building an active alumni network.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Know More Section -->
-    <div class="know-more" data-aos="fade-up" data-aos-delay="500">
-      <h3 class="section-subtitle">Know More About Us</h3>
-
-      <div class="detail-card" data-key="why">
-        <div class="card-title">Why Ausbildung?</div>
-        <div class="card-detail">
-          Ausbildung blends classroom learning with paid on‑the‑job training, leading directly to career opportunities.
-        </div>
-      </div>
-
-      <div class="detail-card" data-key="visa">
-        <div class="card-title">Visa Assistance</div>
-        <div class="card-detail">
-          End‑to‑end visa application support, from document preparation to embassy interview coaching.
-        </div>
-      </div>
-
-      <div class="detail-card" data-key="language">
-        <div class="card-title">Language Coaching</div>
-        <div class="card-detail">
-          Structured German courses up to B2 level to ensure your success in studies and work.
-        </div>
-      </div>
-
-      <div class="detail-card" data-key="post">
-        <div class="card-title">Post‑Arrival Support</div>
-        <div class="card-detail">
-          Airport pickup, housing assistance, local registrations, banking setup, and ongoing in-country guidance.
-        </div>
-      </div>
-
-      <div class="detail-card" data-key="alumni">
-        <div class="card-title">Alumni Network</div>
-        <div class="card-detail">
-          Join a growing community of graduates for mentorship, job leads, and social events.
-        </div>
-      </div>
-
-      <div class="detail-card" data-key="contact">
-        <div class="card-title">Contact Channels</div>
-        <div class="card-detail">
-          Reach us any time via WhatsApp, email, or phone for queries and support.
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="about.js"></script>
-</body>
-</html>
+<section id="more-about">
+  <h2 class="section-title">Know More About Us</h2>
+  <div class="info-card" onclick="toggleInfo(this)">
+    <h3>Why Ausbildung?</h3>
+    <p class="hidden">Ausbildung blends classroom learning with paid on-the-job training, leading directly to career opportunities.</p>
+  </div>
+  <div class="info-card" onclick="toggleInfo(this)">
+    <h3>Visa Assistance</h3>
+    <p class="hidden">End-to-end visa application support, from document preparation to embassy interview coaching.</p>
+  </div>
+  <div class="info-card" onclick="toggleInfo(this)">
+    <h3>Language Coaching</h3>
+    <p class="hidden">Structured German courses up to B2 level to ensure your success in studies and work.</p>
+  </div>
+  <div class="info-card" onclick="toggleInfo(this)">
+    <h3>Post-Arrival Support</h3>
+    <p class="hidden">Airport pickup, housing assistance, local registrations, banking setup, and in-country guidance.</p>
+  </div>
+  <div class="info-card" onclick="toggleInfo(this)">
+    <h3>Alumni Network</h3>
+    <p class="hidden">Join a growing community of graduates for mentorship, job leads, and social events.</p>
+  </div>
+  <div class="info-card" onclick="toggleInfo(this)">
+    <h3>Contact Channels</h3>
+    <p class="hidden">Reach us any time via WhatsApp, email, or phone for queries and support.</p>
+  </div>
+</section>
