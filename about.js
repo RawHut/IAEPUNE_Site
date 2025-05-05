@@ -1,11 +1,11 @@
-// Initialize AOS
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize AOS
   AOS.init({ duration: 600, once: true });
 
-  // Flip cards on tap/click
-  document.querySelectorAll('.flip-card').forEach(card => {
+  // Toggle detail cards
+  document.querySelectorAll('.detail-card').forEach(card => {
     card.addEventListener('click', () => {
-      card.classList.toggle('flipped');
+      card.classList.toggle('active');
     });
   });
 });
