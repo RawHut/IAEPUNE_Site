@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #eee;
+}
+
 #more-about {
   padding: 2rem 1rem;
   text-align: center;
@@ -6,13 +13,14 @@
 .section-title {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #222;
+  color: #fff;
 }
 
 .info-card {
-  background: #fff;
+  background: #1e1e1e;
+  border: 1px solid #333;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   margin: 1rem auto;
   max-width: 90%;
   padding: 1.2rem;
@@ -20,19 +28,23 @@
   text-align: left;
   cursor: pointer;
   user-select: none;
-  -webkit-tap-highlight-color: transparent; /* remove blue tap effect on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.info-card:hover {
+  background: #2a2a2a;
 }
 
 .info-card h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #111;
+  color: #fff;
 }
 
 .info-text {
   margin-top: 0.5rem;
   font-size: 0.95rem;
-  color: #444;
+  color: #ccc;
   line-height: 1.4;
   opacity: 0;
   max-height: 0;
@@ -42,5 +54,5 @@
 
 .info-text.visible {
   opacity: 1;
-  max-height: 200px; /* enough height for full text */
+  max-height: 200px;
 }
