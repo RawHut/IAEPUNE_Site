@@ -1,17 +1,21 @@
 /* Reset & Base */
-* { margin:0; padding:0; box-sizing:border-box }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
   color: #333;
-  height: 600vh; /* enough height for scrolling */
-  position: relative;
+  margin: 0;
 }
 
 /* Fixed Instruction Box */
 .instruction-card {
   position: fixed;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background: #1e88e5;
   color: #fff;
@@ -24,50 +28,37 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 .instr-decor {
-  width: 60px; height: 4px;
+  width: 60px;
+  height: 4px;
   background: #fff;
   margin: 0 auto 12px;
   border-radius: 2px;
 }
 
-/* Invisible spacer so first card sits below instruction */
-.spacer {
-  height: 100vh;
+/* Scrollable Container */
+.card-container {
+  padding-top: 100vh; /* push first card below the instruction */
+  padding-bottom: 100vh; /* allow scrolling past last card */
 }
 
-/* Card Base (all cards overlap each other) */
+/* Card Base */
 .card {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
+  margin: 60px auto;
   width: 90%;
   max-width: 360px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   opacity: 0;
+  transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Only the .active card is fully visible and centered */
+/* Active (visible) card */
 .card.active {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-  z-index: 5;
+  transform: translateY(0);
 }
-
-/* Decorations for different cards */
-.image-card .img-box {
-  overflow: hidden;
-  border-radius: 6px;
-}
-.image-card img { width:100%; display:block }
-
-.info2  { background: #e8f5e9; }
-.info1  { background: #e3f2fd; }
-.info3  { background: #fff3e0; }
-.info4  { background: #f3e5f5; }
-.disclaimer-card { background: #fff; }
 
 /* Card Content */
 .card-content {
@@ -75,12 +66,38 @@ body {
   text-align: center;
 }
 .card-content h3 {
-  font-size: 22px; margin-bottom: 12px;
+  font-size: 22px;
+  margin-bottom: 12px;
 }
 .card-content p {
-  font-size: 16px; line-height:1.5;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
-.disclaimer { font-size:14px; color:#666; }
 
-/* Price Asterisks */
-.asterisk { font-size: 14px; vertical-align: super; }
+/* Image Card */
+.image-card .img-box {
+  overflow: hidden;
+  border-radius: 6px;
+}
+.image-card img {
+  width: 100%;
+  display: block;
+}
+
+/* Background Colors */
+.info2  { background: #e8f5e9; }
+.info1  { background: #e3f2fd; }
+.info3  { background: #fff3e0; }
+.info4  { background: #f3e5f5; }
+.disclaimer-card { background: #fff; }
+
+/* Disclaimer & Asterisk */
+.disclaimer-card .disclaimer {
+  font-size: 14px;
+  color: #666;
+}
+.asterisk {
+  font-size: 14px;
+  vertical-align: super;
+}
