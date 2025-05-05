@@ -1,109 +1,110 @@
+/* Base */
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #222;
 }
-
 .about-section {
   padding: 20px;
   max-width: 600px;
   margin: auto;
 }
-
 .section-title {
   text-align: center;
   font-size: 24px;
-  margin-bottom: 30px;
-}
-
-.timeline {
-  position: relative;
-  margin: 30px 0;
-}
-
-.timeline-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.circle {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  background: #ffd700;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  font-size: 20px;
-  color: #333;
-}
-
-.timeline-content {
-  background: #f0f0f0;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.flip-section {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.flip-title {
-  font-size: 20px;
   margin-bottom: 20px;
 }
 
+/* Timeline Cards */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.timeline-card {
+  position: relative;
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.timeline-card .icon {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: #ffcc00;
+}
+.timeline-card h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+.timeline-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Flip Section */
+.flip-section {
+  margin-top: 40px;
+}
+.flip-title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
 .flip-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 16px;
 }
-
 .flip-card {
-  background: transparent;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 180px;
   perspective: 1000px;
 }
-
 .flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
+  transition: transform 0.6s;
   transform-style: preserve-3d;
-  transition: transform 0.8s;
 }
-
-.flip-card:hover .flip-inner {
+.flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
 }
-
-.flip-front, .flip-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-
-.flip-front {
-  background: #e3e3e3;
+.flip-card-front {
+  background: #eaeaea;
+  color: #222;
 }
-
-.flip-back {
-  background: #333;
-  color: white;
+.flip-card-back {
+  background: #222;
+  color: #fff;
   transform: rotateY(180deg);
+}
+
+/* Responsive adjustments */
+@media (min-width: 400px) {
+  .flip-card {
+    width: 140px;
+    height: 200px;
+  }
 }
