@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card');
+  const cards = Array.from(document.querySelectorAll('.card'));
   let startY = 0;
+  let startCardIdx = null;
   let currentIndex = 0;
+
   const SWIPE_THRESHOLD = 80;
   const WHEEL_THRESHOLD = 30;
+  const FLIP_DELAY = 700; // match your CSS transition
 
   // Helpers
   function flipCard(idx) {
@@ -23,13 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (c) c.scrollIntoView({ behavior: 'smooth' });
   }
 
-  // TOUCH EVENTS
+  // TOUCH EVENTS: only if touchstart began on the current card
   window.addEventListener('touchstart', e => {
     startY = e.touches[0].clientY;
+    const cardEl = e.target.closest('.card');
+    startCardIdx = cards.indexOf(cardEl);
   });
+
   window.addEventListener('touchend', e => {
     const endY = e.changedTouches[0].clientY;
     const delta = startY - endY;
+
+    // ignore if the gesture didn't start on the active card
+    if (startCardIdx !== currentIndex) return;
 
     if (delta > SWIPE_THRESHOLD) {
       // swipe up → flip forward
@@ -38,38 +47,44 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           currentIndex++;
           scrollToCard(currentIndex);
-        }, 700);
+        }, FLIP_DELAY);
       }
     } else if (delta < -SWIPE_THRESHOLD) {
       // swipe down → flip back
       if (currentIndex > 0) {
+        unflipCard(currentIndex - 1);
         currentIndex--;
-        unflipCard(currentIndex);
         scrollToCard(currentIndex);
       }
     }
   });
 
-  // MOUSE WHEEL EVENTS
-  window.addEventListener('wheel', e => {
-    const delta = e.deltaY;
+  // MOUSE WHEEL: listen on each card, only on the active one
+  cards.forEach((card, idx) => {
+    card.addEventListener('wheel', e => {
+      // if it's not the current card, ignore
+      if (idx !== currentIndex) return;
 
-    if (delta > WHEEL_THRESHOLD) {
-      // wheel down → flip forward
-      flipCard(currentIndex);
-      if (currentIndex < cards.length - 1) {
-        setTimeout(() => {
-          currentIndex++;
+      e.preventDefault(); // stop native scroll
+
+      const delta = e.deltaY;
+      if (delta > WHEEL_THRESHOLD) {
+        // wheel down → flip forward
+        flipCard(currentIndex);
+        if (currentIndex < cards.length - 1) {
+          setTimeout(() => {
+            currentIndex++;
+            scrollToCard(currentIndex);
+          }, FLIP_DELAY);
+        }
+      } else if (delta < -WHEEL_THRESHOLD) {
+        // wheel up → flip back
+        if (currentIndex > 0) {
+          unflipCard(currentIndex - 1);
+          currentIndex--;
           scrollToCard(currentIndex);
-        }, 700);
+        }
       }
-    } else if (delta < -WHEEL_THRESHOLD) {
-      // wheel up → flip back
-      if (currentIndex > 0) {
-        currentIndex--;
-        unflipCard(currentIndex);
-        scrollToCard(currentIndex);
-      }
-    }
+    }, { passive: false });
   });
 });
