@@ -63,29 +63,28 @@ body {
   margin-bottom: 16px;
   padding: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.info-box:hover {
+  background: #f9f9f9;
 }
 .info-box h3 {
   font-size: 16px;
   margin-bottom: 8px;
 }
-.toggle-btn {
-  display: inline-block;
-  margin-bottom: 8px;
-  padding: 6px 10px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+.short-text {
   font-size: 14px;
-}
-.toggle-btn:hover {
-  background: #0056b3;
-}
-.info-text {
-  display: none;
-  font-size: 14px;
-  line-height: 1.4;
   color: #555;
+}
+.full-text {
+  display: none;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+}
+.info-box[data-expanded="true"] .full-text {
+  display: block;
 }
 
 /* Footer */
