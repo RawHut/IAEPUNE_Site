@@ -5,76 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IAE Pune – Ausbildung</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- Fixed Header -->
-  <header>
-    <div class="logo">IAE Pune</div>
+  <!-- Top Ribbon -->
+  <header class="ribbon">
+    <img src="logo.png" alt="IAE Pune Logo" class="logo">
+    <nav class="top-nav">
+      <a href="contact.html" class="nav-button">Contact Us</a>
+      <a href="about.html" class="nav-button">About Us</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" data-aos="fade-up">
-    <h1>Start Your Career in Germany</h1>
-    <p>Join Ausbildung programs through IAE Pune. Full support from India to Germany.</p>
+  <!-- Banner -->
+  <section class="banner">
+    <img src="banner.jpg" alt="Company Banner">
   </section>
 
-  <!-- Info Box Sections -->
-  <section class="info-grid">
-    <div class="info-box" data-aos="fade-up">
-      <h3>What is Ausbildung?</h3>
-      <p>Vocational training in Germany combining study + paid job. Duration: 2–3.5 years.</p>
-    </div>
+  <!-- Main Info Boxes -->
+  <main>
+    <section class="info-section">
+      
+      <div class="info-box">
+        <h3>What We Do</h3>
+        <button class="toggle-btn" data-target="info1">More Info</button>
+        <p id="info1" class="info-text">
+          We guide Indian students through Germany’s Ausbildung—from program selection and language prep, to visa and post‑arrival support.
+        </p>
+      </div>
+      
+      <div class="info-box">
+        <h3>Who We Are</h3>
+        <button class="toggle-btn" data-target="info2">More Info</button>
+        <p id="info2" class="info-text">
+          IAE Pune is a career consultancy specializing in vocational training placements in Europe, with personalized counseling and hands‑on assistance.
+        </p>
+      </div>
+      
+      <div class="info-box">
+        <h3>Our Process</h3>
+        <button class="toggle-btn" data-target="info3">More Info</button>
+        <p id="info3" class="info-text">
+          1. Assess goals<br>
+          2. German language coaching<br>
+          3. Document prep & interview training<br>
+          4. Visa application & travel arrangements<br>
+          5. Post‑arrival orientation
+        </p>
+      </div>
 
-    <div class="info-box" data-aos="fade-up">
-      <h3>Why Ausbildung?</h3>
-      <p>Earn while you learn. Work with top firms. Open path to permanent jobs in Germany.</p>
-    </div>
+      <div class="info-box">
+        <h3>Expected Salary</h3>
+        <button class="toggle-btn" data-target="info4">More Info</button>
+        <p id="info4" class="info-text">
+          Apprentices earn between €1,000–€1,500/month during Ausbildung, with strong prospects for permanent employment thereafter.
+        </p>
+      </div>
 
-    <div class="info-box" data-aos="fade-up">
-      <h3>Eligibility</h3>
-      <p>12th pass. B1–B2 German language. Valid documents for visa process.</p>
-    </div>
+      <div class="info-box">
+        <h3>Post‑Arrival Services</h3>
+        <button class="toggle-btn" data-target="info5">More Info</button>
+        <p id="info5" class="info-text">
+          Airport pickup, housing search, registrations, banking help, visa extensions & more for a one‑time fee of €990.
+        </p>
+      </div>
 
-    <div class="info-box" data-aos="fade-up">
-      <h3>Popular Fields</h3>
-      <p>Healthcare, Mechatronics, IT, Automotive, Logistics, Tourism, Nursing.</p>
-    </div>
+    </section>
+  </main>
 
-    <div class="info-box" data-aos="fade-up">
-      <h3>IAE Pune Process</h3>
-      <p>We guide you through program selection, language training, documentation, visa & travel.</p>
-    </div>
-
-    <div class="info-box" data-aos="fade-up">
-      <h3>German Language</h3>
-      <p>B1–B2 required. IAE provides coaching. Goethe exams handled independently.</p>
-    </div>
-
-    <div class="info-box" data-aos="fade-up">
-      <h3>Expected Salary</h3>
-      <p>€1000–€1500/month during Ausbildung. Strong chance of full-time job post training.</p>
-    </div>
-
-    <div class="info-box" data-aos="fade-up">
-      <h3>Post-Arrival Services</h3>
-      <p>Airport pickup, housing help, registration, translation, visa extension, and more. (€990)</p>
-    </div>
-
-    <div class="info-box" data-aos="fade-up">
-      <h3>Contact</h3>
-      <p>Mr. Vishal – +91-9975042929<br>Email: info@iaepune.com</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 IAE Pune. All rights reserved.</p>
+  <!-- Footer with Location Link -->
+  <footer class="footer">
+    <a href="https://maps.google.com/?q=IAE+Pune+Office" target="_blank" class="loc-link">
+      Find Our Location
+    </a>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="script.js"></script>
-  <script>AOS.init();</script>
 </body>
 </html>
