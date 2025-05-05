@@ -1,133 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - IAE Pune</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: white;
-      color: #222;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 600px;
-      margin: 60px auto;
-      position: relative;
-    }
-
-    .timeline-line {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 4px;
-      height: 100%;
-      background-color: #ffc107;
-    }
-
-    .timeline-item {
-      position: relative;
-      width: 100%;
-      margin: 50px 0;
-    }
-
-    .timeline-dot {
-      width: 20px;
-      height: 20px;
-      background-color: #ffc107;
-      border-radius: 50%;
-      position: absolute;
-      left: 50%;
-      top: 0;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-
-    .timeline-content {
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      padding: 20px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 85%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      animation: fadeInUp 0.6s ease;
-    }
-
-    .timeline-content h3 {
-      margin-top: 0;
-      color: #333;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      .timeline-content {
-        width: 90%;
-        padding: 18px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="about.css" />
 </head>
 <body>
-
   <div class="container">
-    <div class="timeline-line"></div>
+    <h1>About IAE Pune</h1>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Who We Are</h3>
-        <p>IAE Pune is a reliable consultancy helping students and professionals explore international education and career opportunities, especially in Germany.</p>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>Founded With Purpose</h3>
+          <p>IAE Pune was established to guide students and professionals for education & career opportunities in Germany.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>Expert Guidance</h3>
+          <p>We specialize in Ausbildung pathways, offering reliable consultation and support tailored for individual needs.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>Partnerships in Germany</h3>
+          <p>IAE partners with reputed institutions and employers in Germany to ensure high placement success rates.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>One-on-One Mentorship</h3>
+          <p>We ensure every student gets personal attention and guidance throughout the application process.</p>
+        </div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Study Abroad Guidance</h3>
-        <p>We assist in selecting the right universities, preparing documents, and guiding through application and visa processes to study abroad stress-free.</p>
+    <h2 class="flip-title">Know More About Us</h2>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h4>Our Mission</h4>
+            <p>What drives us.</p>
+          </div>
+          <div class="card-back">
+            <p>To provide affordable and transparent opportunities for Indian students in Germany, without intermediaries or misinformation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h4>Why Ausbildung?</h4>
+            <p>Benefits explained.</p>
+          </div>
+          <div class="card-back">
+            <p>Ausbildung is a job-oriented vocational training system in Germany that pays students monthly and leads to full-time jobs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h4>Our Team</h4>
+            <p>Who we are.</p>
+          </div>
+          <div class="card-back">
+            <p>A team of German-educated professionals and Indian consultants who’ve been through the journey themselves.</p>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Germany Ausbildung Support</h3>
-        <p>We specialize in helping students join Ausbildung (vocational training) programs in Germany, offering career-focused and practical paths for success.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>End-to-End Services</h3>
-        <p>From the first counseling session to post-arrival support, IAE Pune takes care of every step in your journey abroad.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Why Choose Us</h3>
-        <p>We believe in transparency, personalized support, and building long-term trust with our students and partners.</p>
-      </div>
-    </div>
-
   </div>
-
 </body>
 </html>
