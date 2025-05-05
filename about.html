@@ -2,168 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - IAE Pune</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      color: #111;
-    }
-
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 1.2rem;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .container {
-      padding: 1.2rem;
-    }
-
-    .card {
-      background: #f8f8f8;
-      border-radius: 12px;
-      padding: 1rem;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 2rem 0 1rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .flippable-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-      margin-top: 2rem;
-    }
-
-    .flip-card {
-      background-color: transparent;
-      width: 100%;
-      height: 160px;
-      perspective: 1000px;
-    }
-
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .flip-card-front {
-      background-color: #eaeaea;
-      color: black;
-    }
-
-    .flip-card-back {
-      background-color: #111;
-      color: white;
-      transform: rotateY(180deg);
-    }
-
-    @media (min-width: 600px) {
-      .flippable-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
-
-  <header>About IAE Pune</header>
-
-  <div class="container">
-    <div class="card">
-      <h2>Our Mission</h2>
-      <p>To provide affordable and transparent opportunities for Indian students in Germany without intermediaries or misinformation.</p>
-    </div>
-
-    <div class="card">
-      <h2>Expert Guidance</h2>
-      <p>Specializing in Ausbildung pathways, we offer reliable consultation and tailored support based on individual needs.</p>
-    </div>
-
-    <div class="card">
-      <h2>Partnerships in Germany</h2>
-      <p>We partner with reputed institutions and employers to ensure successful placements for our students.</p>
-    </div>
-
-    <div class="card">
-      <h2>One-on-One Mentorship</h2>
-      <p>Personalized mentorship and guidance throughout the application process for every student.</p>
-    </div>
-
-    <div class="section-title">More About Ausbildung</div>
-
-    <div class="flippable-grid">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>What is Ausbildung?</h3>
-            <p>Learn about this pathway</p>
-          </div>
-          <div class="flip-card-back">
-            <p>Ausbildung is a vocational training program in Germany that blends theoretical study with paid practical experience.</p>
-          </div>
+  <section class="about-section">
+    <h2 class="section-title">About IAE Pune</h2>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="circle"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-content">
+          <h3>Education Consulting</h3>
+          <p>We help Indian students find suitable education paths in Germany including Ausbildung and other higher education options.</p>
         </div>
       </div>
 
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>Why Choose Us?</h3>
-            <p>Our commitment</p>
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="circle"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-content">
+          <h3>Job Assistance</h3>
+          <p>End-to-end support for job seekers including CV screening, interview prep, and placement with German employers.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="circle"><i class="fas fa-plane-departure"></i></div>
+        <div class="timeline-content">
+          <h3>Visa & Relocation</h3>
+          <p>Expert help in visa application, relocation planning, accommodation, and integration support.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-section" data-aos="fade-up">
+      <h3 class="flip-title">More About Us</h3>
+      <div class="flip-container">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <h4>Why Choose Us?</h4>
+            </div>
+            <div class="flip-back">
+              <p>We provide personalized mentoring and have strong links with reputed German institutions.</p>
+            </div>
           </div>
-          <div class="flip-card-back">
-            <p>We ensure honest, direct access to Ausbildung programs without agents, helping you save costs and time.</p>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <h4>Our Vision</h4>
+            </div>
+            <div class="flip-back">
+              <p>To make international education and jobs accessible for every Indian student and job seeker.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="about.js"></script>
 </body>
 </html>
