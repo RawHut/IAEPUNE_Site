@@ -8,10 +8,15 @@
 </head>
 <body>
 
-  <div class="top-buttons">
-    <button onclick="location.href='index.html'">Home</button>
-    <button onclick="location.href='contact.html'">Contact</button>
-  </div>
+  <header class="site-header">
+    <div class="logo-circle">
+      <img src="logo.png" alt="IAE Pune Logo" />
+    </div>
+    <nav class="nav-buttons">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+  </header>
 
   <section id="more-about">
     <h2 class="section-title">Know More About Us</h2>
@@ -21,30 +26,8 @@
       <p class="info-text">Ausbildung blends classroom learning with paid on-the-job training, leading directly to career opportunities.</p>
     </div>
 
-    <div class="info-card" onclick="toggleInfo(this)">
-      <h3>Visa Assistance</h3>
-      <p class="info-text">End-to-end visa application support, from document preparation to embassy interview coaching.</p>
-    </div>
+    <!-- ... other info-cards ... -->
 
-    <div class="info-card" onclick="toggleInfo(this)">
-      <h3>Language Coaching</h3>
-      <p class="info-text">Structured German courses up to B2 level to ensure your success in studies and work.</p>
-    </div>
-
-    <div class="info-card" onclick="toggleInfo(this)">
-      <h3>Post-Arrival Support</h3>
-      <p class="info-text">Airport pickup, housing assistance, local registrations, banking setup, and in-country guidance.</p>
-    </div>
-
-    <div class="info-card" onclick="toggleInfo(this)">
-      <h3>Alumni Network</h3>
-      <p class="info-text">Join a growing community of graduates for mentorship, job leads, and social events.</p>
-    </div>
-
-    <div class="info-card" onclick="toggleInfo(this)">
-      <h3>Contact Channels</h3>
-      <p class="info-text">Reach us any time via WhatsApp, email, or phone for queries and support.</p>
-    </div>
   </section>
 
   <script src="about.js"></script>
