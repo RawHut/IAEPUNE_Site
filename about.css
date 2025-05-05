@@ -16,9 +16,11 @@
   margin: 1rem auto;
   max-width: 90%;
   padding: 1.2rem;
-  transition: all 0.4s ease;
-  cursor: pointer;
+  transition: background 0.3s ease;
   text-align: left;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; /* remove blue tap effect on mobile */
 }
 
 .info-card h3 {
@@ -27,17 +29,18 @@
   color: #111;
 }
 
-.info-card p {
+.info-text {
   margin-top: 0.5rem;
   font-size: 0.95rem;
   color: #444;
   line-height: 1.4;
-  display: none;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
 }
 
-.info-card p.visible {
-  display: block;
+.info-text.visible {
   opacity: 1;
+  max-height: 200px; /* enough height for full text */
 }
