@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* Reveal sections on scroll using IntersectionObserver */
-  const sections = document.querySelectorAll('.section');
+  /* Reveal sections on scroll */
+  const sections = document.querySelectorAll('.section, .image-section');
   const observerOptions = { threshold: 0.2 };
   const sectionObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
