@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* Reveal sections on scroll using IntersectionObserver */
+  /* Reveal sections on scroll */
   const sections = document.querySelectorAll('.section');
   const observerOptions = {
     threshold: 0.2
