@@ -1,24 +1,11 @@
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
-  const cardContainers = document.querySelectorAll(".card-container");
-  const flipCards = document.querySelectorAll(".flip-card");
+  const navbar = document.querySelector(".navbar");
 
-  // Flip‑on‑click
-  flipCards.forEach(card => {
-    card.addEventListener("click", () => {
-      card.classList.toggle("flipped");
-    });
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.style.background = "rgba(255, 255, 255, 0.95)";
+    } else {
+      navbar.style.background = "rgba(255, 255, 255, 0.9)";
+    }
   });
-
-  // Scroll animations via IntersectionObserver
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle("visible", entry.isIntersecting);
-    });
-  }, {
-    root: null,
-    threshold: 0.1
-  });
-
-  cardContainers.forEach(container => observer.observe(container));
 });
