@@ -1,8 +1,44 @@
+/* contact.css */
+
+/* —————————————————————————— */
+/* Fix the top ribbon layout */
+/* —————————————————————————— */
+header.ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header.ribbon .logo {
+  max-height: 50px;
+  width: auto;
+  display: block;
+}
+
+.top-nav .nav-button {
+  margin-left: 1rem;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+}
+.top-nav .nav-button:hover {
+  color: #007bff;
+}
+
+/* —————————————————————————— */
 /* Contact Page Specific Styles */
+/* —————————————————————————— */
 
 /* Hero Section */
 .contact-hero {
-  margin-top: 64px; /* account for fixed ribbon */
+  margin-top: 64px; /* keep content below the fixed ribbon */
   padding: 40px 20px 20px;
   text-align: center;
   background: #f8f9fa;
