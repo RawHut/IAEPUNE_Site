@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Base Reset & Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eef1f6, #ffffff);
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.nav-buttons {
+  margin-top: 10px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  transition: color 0.3s ease, border 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+}
+
+/* Eligibility Section */
+#eligibility {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.intro {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Criteria Cards */
+.criteria-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.criteria-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.criteria-card.active {
+  animation: bounce 0.5s;
+}
+
+/* Tap Hint */
+.info-hint {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Expandable Details */
+.details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.criteria-card.active .details {
+  max-height: 500px;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .criteria-card h3 {
+    font-size: 18px;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+  }
+}
